@@ -1,7 +1,7 @@
 {
   "name": "www",
   "version": "0.1.0",
-  "repository": "git@gitlab.com:tsujp/jec.sh-www.git",
+  "repository": "git@github.com:tsujp/www.git",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
