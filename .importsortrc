@@ -1,0 +1,8 @@
+{
+  "importSort": {
+    ".ts, .tsx": {
+      "style": "eslint",
+      "parser": "typescript"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# useable once https://www.npmjs.com/advisories/1523  addresses
+# pre-push:
+#   commands:
+#     packages-audit:
+#       tags: frontend security
+#       run: yarn audit
+
+pre-commit:
+  piped: true
+  parallel: false
+
+  commands:
+    format-y-lint-staged:
+      glob: '*.{js,ts,tsx}'
+      run: yarn prettier-standard --lint {staged_files}
+    typescript-compile-dryrun:
+      run: tsc --noEmit
+    lint-styledcomponents-staged:
+      glob: '*.{js,ts,tsx,css,scss}'
+      run: yarn stylelint {all_files}
