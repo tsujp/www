@@ -13,10 +13,6 @@
       "parser": "typescript"
     }
   },
-  "resolutions": {
-    "**/lodash": "lodash/lodash#4.17.19",
-    "**/yargs-parser": "yargs/yargs-parser#18.1.3"
-  },
   "dependencies": {
     "lodash": "^4.17.19",
     "next": "9.4.4",
