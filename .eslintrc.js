@@ -23,19 +23,20 @@ module.exports = {
       },
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-      ],
-      plugins: ['@typescript-eslint', 'react-hooks'],
       parserOptions: {
         ecmaVersion: 2018,
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
         project: './tsconfig.json',
         tsconfigRootDir: __dirname,
+        sourceType: 'module',
       },
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      plugins: ['@typescript-eslint', 'react-hooks'],
       rules: {
         'react/prop-types': 'off',
         'react-hooks/rules-of-hooks': 'error',

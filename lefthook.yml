@@ -12,7 +12,7 @@ pre-commit:
   commands:
     format-y-lint-staged:
       glob: '*.{js,ts,tsx}'
-      run: yarn prettier-standard --lint {staged_files}
+      # run: yarn prettier-standard --lint {staged_files}
     typescript-compile-dryrun:
       run: tsc --noEmit
     lint-styledcomponents-staged:
