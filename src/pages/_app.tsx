@@ -1,4 +1,3 @@
-import Footer from '@/components/navigation/MainFooter'
 import { NextComponentType } from 'next'
 import { AppContext, AppInitialProps, AppProps } from 'next/app'
 import 'normalize.css'
@@ -10,7 +9,6 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   return (
     <>
       <Component {...pageProps} />
-      <Footer />
     </>
   )
 }

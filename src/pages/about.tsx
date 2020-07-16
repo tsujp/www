@@ -7,12 +7,12 @@ const Test = styled.p`
   color: red;
 `
 
-const Home: FC = () => {
+const About: FC = () => {
   return (
     <Layout>
-      <Test>Under construction, check back by the 20th July</Test>
+      <Test>About</Test>
     </Layout>
   )
 }
 
-export default Home
+export default About
