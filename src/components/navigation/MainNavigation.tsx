@@ -1,3 +1,4 @@
+import * as S from '@/components/styled'
 import Link from 'next/link'
 import styled from 'styled-components'
 
@@ -40,7 +41,11 @@ export const MainNavigation = () => {
     )
   })
 
-  return <NavigationContainer>{routes}</NavigationContainer>
+  return (
+    <NavigationContainer>
+      <S.NavigationBar>{routes}</S.NavigationBar>
+    </NavigationContainer>
+  )
 }
 
 const NavigationContainer = styled.nav`

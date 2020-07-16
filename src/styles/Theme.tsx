@@ -1,11 +1,11 @@
-import React from 'react'
+import { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './GlobalStyle'
 import { LightTheme } from '@/styles/LightTheme'
 
 interface IThemeProps {}
 
-export const Theme: React.FC<IThemeProps> = ({ children }) => {
+export const Theme: FC<IThemeProps> = ({ children }) => {
   return (
     <ThemeProvider theme={LightTheme}>
       <GlobalStyle />
