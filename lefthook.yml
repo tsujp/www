@@ -18,3 +18,5 @@ pre-commit:
     lint-styledcomponents-staged:
       glob: '*.{js,ts,tsx,css,scss}'
       run: yarn stylelint {staged_files}
+    update-commit-files:
+      run: git add {staged_files}
