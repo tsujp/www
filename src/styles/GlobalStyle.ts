@@ -1,13 +1,8 @@
-import { createGlobalStyle } from 'styled-components/macro'
-
-interface IThemeType {
-  [key: string]: {
-    [key: string]: string
-  }
-}
+import { createGlobalStyle } from 'styled-components'
+import { ITheme } from '@/styles'
 
 interface IThemeProps {
-  theme: IThemeType
+  theme: ITheme
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -32,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   #root {
     display: flex;
     flex-direction: column;
-    background: ${(props: IThemeProps) => props.theme.colours.sitebg};
+    background: ${(props: IThemeProps) => props.theme.colour.sitebg};
     min-height: 100vh;
   }
 
@@ -49,8 +44,8 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     position: relative;
     padding: ${(props: IThemeProps) => `
-      ${props.theme.dimensions.paddingTopBottom}
-      ${props.theme.dimensions.paddingLeftRight}
+      ${props.theme.size.padTB}
+      ${props.theme.size.padLR}
     `};
 
     max-width: 1200px;
@@ -59,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
-    color: ${(props: IThemeProps) => props.theme.colours.text};
+    color: ${(props: IThemeProps) => props.theme.colour.text};
   }
 
   ul {
@@ -70,21 +65,10 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     outline: none;
-    color: ${(props: IThemeProps) => props.theme.colours.text};
+    color: ${(props: IThemeProps) => props.theme.colour.text};
 
     &:visited {
-      color: ${(props: IThemeProps) => props.theme.colours.text};
-    }
-  }
-
-  h2 {
-    font-size: 2.3rem;
-    font-weight: 400;
-    margin-bottom: ${(props: IThemeProps) =>
-      props.theme.dimensions.h1MarginBottom};
-
-    span {
-      color: ${(props: IThemeProps) => props.theme.colours.textLight};
+      color: ${(props: IThemeProps) => props.theme.colour.text};
     }
   }
 `
