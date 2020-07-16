@@ -16,12 +16,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, input {
+    font-family: 'TTInterphases-Regular', sans-serif;
     font-weight: 400;
     font-size: 62.5%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-size: 1.6rem;
+    color: ${(props: IThemeProps) => props.theme.colour.text};
   }
 
   #root {
@@ -50,11 +56,6 @@ export const GlobalStyle = createGlobalStyle`
 
     max-width: 1200px;
     width: 100%;
-  }
-
-  body {
-    font-size: 1.6rem;
-    color: ${(props: IThemeProps) => props.theme.colour.text};
   }
 
   ul {
